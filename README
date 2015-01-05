@@ -1,0 +1,6 @@
+Used in this project:
+- Python
+- Virtualenv
+- Flask
+- schedule https://github.com/dbader/schedule
+
