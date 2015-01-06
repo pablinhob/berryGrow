@@ -72,7 +72,13 @@ a:focus {
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
+    font-size:25px;
 }
+
+    .navbar-custom .navbar-brand img {
+        float:left;
+        margin-right:10px;
+    }
 
 .navbar-custom .navbar-brand:focus {
     outline: 0;
