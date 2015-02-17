@@ -7,8 +7,9 @@ An open controller for your grow rom
 * Iria Varela: berryGrow Logo . http://onegrovaicontodo.tumblr.com/
 
 # Python dependences #
-* $pip install flask
-* $pip install schedule
+* >pip install flask
+* >pip install schedule
+* >pip install RPi.GPIO
 
 # Using libraries #
 * JQuery
