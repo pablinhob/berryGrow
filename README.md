@@ -2,7 +2,7 @@ berryGrow
 ===============
 An open controller for your grow rom
 
-# Credits # 
+# Credits #
 * Pablo Blanco: software and hardware design . https://github.com/pablinhob/
 * Iria Varela: berryGrow Logo . http://onegrovaicontodo.tumblr.com/
 
