@@ -19,4 +19,10 @@ An open controller for your grow rom
 * caman to manipulate images
 * Ion icons http://ionicons.com/
 
+# SD Backup and restore #
+Do image of your berrygrow system
+* sudo dd bs=4M if=/dev/sdb | gzip > /home/your_username/image`date +%d%m%y`.gz
+Restore or install image 
+* sudo gzip -dc /home/your_username/image.gz | dd bs=4M of=/dev/sdb
 
+Thanks to: https://www.raspberrypi.org/forums/viewtopic.php?f=91&t=46911
