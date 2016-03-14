@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-sshfs pablinho@$1:/home/pablinho/desarrollo/proxectos/berryGrow/ berryGrow
+sshfs pi@$1:/home/pi/berryGrow/ $2
