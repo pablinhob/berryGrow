@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from flask import Flask
 
 
@@ -9,7 +10,7 @@ def hello():
   return "<html><script type='text/javascript' src='ola.js'></script></html>"
 
 if __name__ == '__main__':
-  app.run( 
+  app.run(
         host="localhost",
         port=int("5000")
   )

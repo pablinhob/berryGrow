@@ -5,7 +5,8 @@ import schedule
 import time
 import datetime
 import pprint
-import conf/machinesConf.py
+import conf/machinesConf
+import conf/machinesStatus
 import lib/Machine
 
 
