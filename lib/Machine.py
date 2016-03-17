@@ -1,3 +1,9 @@
+import RPi.GPIO as GPIO
+import time
+import datetime
+import schedule
+import pprint
+
 class Machine:
 
     conf = False
