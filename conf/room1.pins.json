@@ -1,9 +1,0 @@
-{
-  "fan_extraction": 10,
-  "fan_intraction": false,
-  "fan_room": 11,
-  "moisture_sensor": 12,
-  "temperature_sensor": 13,
-  "ph_sensor": false,
-  "ec_sensor": false
-}

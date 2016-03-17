@@ -1,8 +1,0 @@
-{
-  "on": "21:00",
-  "off": "9:00",
-  "temperature": 123,
-  "moisture": 10,
-  "fan_power": 0,
-  "fan_power_variation": 10,
-}

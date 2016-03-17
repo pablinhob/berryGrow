@@ -1,15 +1,25 @@
-from flask import Flask
+#!/usr/bin/python
+
+import RPi.GPIO as GPIO
+import schedule
+import time
+import datetime
+import pprint
+import conf/machinesConf.py
+import lib/Machine
 
 
-app = Flask(__name__, static_url_path='')
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+
+machines = []
+
+for (i, mConf) in enumerate( machinesConf ):
+    if( mConf['enabled'] == True ):
+        machines.append( Machine( mConf, machinesStatus[i] ) )
 
 
-@app.route('/')
-def hello():
-  return "<html><script type='text/javascript' src='ola.js'></script></html>"
 
-if __name__ == '__main__':
-  app.run( 
-        host="localhost",
-        port=int("5000")
-  )
+while True:
+    schedule.run_pending()
+    time.sleep(1)
