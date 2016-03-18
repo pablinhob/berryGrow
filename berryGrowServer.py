@@ -14,7 +14,4 @@ def index():
     return content
 
 if __name__ == '__main__':
-  app.run(
-        port=int("5000")
-
-  )
+  app.run('0.0.0.0', 5000)
