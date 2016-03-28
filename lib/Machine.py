@@ -83,7 +83,7 @@ class Machine:
         if( self.pwm_fan_room != False ):
     	   self.pwm_fan_room.ChangeDutyCycle( self.status['day']['fan_room'] )
 
-    	print self.conf['name'] +": Luz Acendida"
+    	print self.conf['name'] +": Light ON"
 
     def isNight( self ):
         #pprint.pprint(self.status)
@@ -104,4 +104,4 @@ class Machine:
         if( self.pwm_fan_room != False ):
     	   self.pwm_fan_room.ChangeDutyCycle( self.status['night']['fan_room'] )
 
-    	print self.conf['name'] +": Luz apagada"
+    	print self.conf['name'] +": Light OFF"
