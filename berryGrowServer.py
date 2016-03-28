@@ -28,14 +28,15 @@ def getConf():
                     status=200,
                     mimetype="application/json")
 
-@app.route('/setStatus')
+@app.route('/setStatus', methods = ['POST'])
 def setStatus():
-    return "set status"
+    request.form['statusData']:
+    return True
 
-@app.route('/setConf')
+@app.route('/setConf', methods = ['POST'])
 def setConf():
-    return "set conf"
-
+    request.form['confData']:
+    return True
 
 
 if __name__ == '__main__':
