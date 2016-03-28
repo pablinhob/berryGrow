@@ -1,5 +1,6 @@
 [
   {
+
     "name": "Growing room",
     "enabled": true,
     "pins" :{
@@ -9,7 +10,7 @@
         "lamp":5,
         "pump": false
     },
-    "timer": {"day": "18:00", "night":"14:00"}
+    "timer": {"day": "17:00", "night":"14:00"}
   },
   {
     "name": "Flowering room",
@@ -21,6 +22,6 @@
         "lamp":27,
         "pump": false
     },
-    "timer": {"day": "18:00", "night":"14:00"}
+    "timer": {"day": "20:00", "night":"14:00"}
   }
 ]

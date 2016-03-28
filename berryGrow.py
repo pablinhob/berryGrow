@@ -11,8 +11,8 @@ from lib.Machine import *
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-pathMachinesConf = os.getcwd()+'/conf/machinesConf.json')
-pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json')
+pathMachinesConf = os.getcwd()+'/conf/machinesConf.json'
+pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json'
 
 machines = []
 
@@ -31,18 +31,20 @@ statusLastUpdate = False
 
 while True:
 
-    dateUpdateConf = time.ctime( os.path.getmtime( pathMachinesConf ) )
-    dateUpdateStatus = time.ctime( os.path.getmtime( pathMachinesStatus ) )
-
+    dateUpdateConf = os.path.getmtime( pathMachinesConf )
+    dateUpdateStatus = os.path.getmtime( pathMachinesStatus )
+    print time.ctime( dateUpdateConf )
+    print time.ctime( confLastUpdate )
     if(
-        dateUpdateConf > confLastUpdate ||
-        dateUpdateStatus > statusLastUpdate ||
+        dateUpdateConf > confLastUpdate or
+        dateUpdateStatus > statusLastUpdate or
         confLastUpdate == False
     ):
         confLastUpdate = dateUpdateConf
         statusLastUpdate = dateUpdateStatus
         schedule.clear()
         updateMachines()
+        print "changes!!"
 
 
     schedule.run_pending()
