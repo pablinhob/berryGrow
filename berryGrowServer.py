@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+
 from flask import *
 import pprint
 import json
@@ -16,21 +17,14 @@ def index():
     with open('static/berrygrow.html', 'r') as content_file:
         content = content_file.read()
     return content
-'''
+
 @app.route('/getStatus')
 def getStatus():
-    return Response(response= json.loads( open( pathMachinesStatus ).read() ),
-                    status=200,
-                    mimetype="application/json")
-'''
+    return Response(open( open( pathMachinesStatus ).read(), mimetype='text/json')
 @app.route('/getConf')
 def getConf():
+    return Response(open( pathMachinesConf ).read(), mimetype='text/json')
 
-    #return open( pathMachinesConf ).read()
-    return Response(response= json.loads( open( pathMachinesConf ).read() ),
-                    status=200,
-                    mimetype="application/json")
-'''
 @app.route('/setStatus', methods = ['POST'])
 def setStatus():
     ret = 'true'
@@ -60,7 +54,7 @@ def setConf():
                         status=200,
                         mimetype="application/json")
 
-'''
+
 if __name__ == '__main__':
-    app.debug = True
+    #app.debug = True
     app.run( host="0.0.0.0", port=5000 )
