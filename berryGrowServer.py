@@ -2,7 +2,7 @@
 
 from flask import *
 import pprint
-
+import json
 
 pathMachinesConf = os.getcwd()+'conf/machinesConf.json')
 pathMachinesStatus = os.getcwd()+'conf/machinesStatus.json')
@@ -30,13 +30,32 @@ def getConf():
 
 @app.route('/setStatus', methods = ['POST'])
 def setStatus():
-    request.form['statusData']:
-    return True
+    ret = 'true'
+    try:
+        jsonObj = json.load( request.form['statusData'] )
+    except ValueError, e:
+        ret =  '"Invalid JSON"'
+    else:
+        with open( pathMachinesStatus , 'w') as outfile:
+            json.dump( jsonObj, outfile )
+
+    return ret
 
 @app.route('/setConf', methods = ['POST'])
 def setConf():
-    request.form['confData']:
-    return True
+    ret = 'true'
+
+    try:
+        jsonObj = json.load( request.form['confData'] )
+    except ValueError, e:
+        ret =  '"Invalid JSON"'
+    else:
+        with open( pathMachinesConf , 'w') as outfile:
+            json.dump( jsonObj, outfile )
+
+    return Response(response= '{ "response": ' + ret + ' }',
+                        status=200,
+                        mimetype="application/json")
 
 
 if __name__ == '__main__':
