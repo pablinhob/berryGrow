@@ -33,8 +33,8 @@ while True:
 
     dateUpdateConf = os.path.getmtime( pathMachinesConf )
     dateUpdateStatus = os.path.getmtime( pathMachinesStatus )
-    print time.ctime( dateUpdateConf )
-    print time.ctime( confLastUpdate )
+    #print time.ctime( dateUpdateConf )
+    #print time.ctime( confLastUpdate )
     if(
         dateUpdateConf > confLastUpdate or
         dateUpdateStatus > statusLastUpdate or
