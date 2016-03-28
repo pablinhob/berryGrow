@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Growing room",
+    "enabled": true,
+    "pins" :{
+        "fan_extraction":19,
+        "fan_intraction": false,
+        "fan_room": false,
+        "lamp":5,
+        "pump": false
+    },
+    "timer": {"day": "18:00", "night":"14:00"}
+  },
+  {
+    "name": "Flowering room",
+    "enabled": false,
+    "pins" :{
+        "fan_extraction":false,
+        "fan_intraction": false,
+        "fan_room": false,
+        "lamp":27,
+        "pump": false
+    },
+    "timer": {"day": "18:00", "night":"14:00"}
+  }
+]

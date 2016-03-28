@@ -12,7 +12,7 @@ machinesConf = [
         'lamp':5,
         'pump': False #17
     },
-    'timer': {'day': '20:00', 'night':'22:52'}
+    'timer': {'day': '18:00', 'night':'14:00'}
   },
   # Flowering room
   {
@@ -25,6 +25,6 @@ machinesConf = [
         'lamp':27,
         'pump': False # 22
     },
-    'timer': {'day':'23:00', 'night':'22:50'}
+    'timer': {'day': '18:00', 'night':'14:00'}
   }
 ]

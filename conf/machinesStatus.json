@@ -1,0 +1,22 @@
+[
+  {
+   "day": {
+    "fan_extraction":50,
+    "pump": true
+   },
+   "night": {
+    "fan_extraction":30,
+    "pump": false
+   }
+  },
+  {
+   "day": {
+    "fan_extraction":40,
+    "pump": true
+   },
+   "night": {
+    "fan_extraction":20,
+    "pump": false
+   }
+  }
+]

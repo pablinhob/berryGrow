@@ -2,8 +2,8 @@
 
 import RPi.GPIO as GPIO
 import pprint
-from conf.machinesConf import *
-from conf.machinesStatus import *
+#from conf.machinesConf import *
+#from conf.machinesStatus import *
 from lib.Machine import *
 
 
@@ -13,6 +13,10 @@ GPIO.setmode(GPIO.BCM)
 
 machines = []
 #pprint.pprint(machinesStatus)
+
+
+
+schedule.clear()
 for (i, mConf) in enumerate( machinesConf ):
     if( mConf['enabled'] == True ):
         machines.append( Machine( mConf, machinesStatus[i] ) )
