@@ -4,6 +4,9 @@ from flask import *
 import pprint
 
 
+pathMachinesConf = os.getcwd()+'conf/machinesConf.json')
+pathMachinesStatus = os.getcwd()+'conf/machinesStatus.json')
+
 app = Flask(__name__, static_url_path='')
 
 @app.route('/')
@@ -12,22 +15,28 @@ def index():
     with open('static/berrygrow.html', 'r') as content_file:
         content = content_file.read()
     return content
-@app.route('/read')
-def read():
-    return "READDDDDD"
+
+@app.route('/getStatus')
+def getStatus():
+    return Response(response= json.loads( open( pathMachinesStatus ).read() ),
+                    status=200,
+                    mimetype="application/json")
+
+@app.route('/getConf')
+def getConf():
+    return Response(response= json.loads( open( pathMachinesConf ).read() ),
+                    status=200,
+                    mimetype="application/json")
+
+@app.route('/setStatus')
+def setStatus():
+    return "set status"
+
+@app.route('/setConf')
+def setConf():
+    return "set conf"
+
 
 
 if __name__ == '__main__':
-
   app.run( host="0.0.0.0", port=5000 )
-
-
-
-
-
-
-
-
-
- # d = shelve.open('persist.pid')
- # d['berryGrow'] = machines
