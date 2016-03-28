@@ -3,9 +3,10 @@
 from flask import *
 import pprint
 import json
+import os
 
-pathMachinesConf = os.getcwd()+'conf/machinesConf.json')
-pathMachinesStatus = os.getcwd()+'conf/machinesStatus.json')
+pathMachinesConf = os.getcwd()+'/conf/machinesConf.json'
+pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json'
 
 app = Flask(__name__, static_url_path='')
 
@@ -15,19 +16,21 @@ def index():
     with open('static/berrygrow.html', 'r') as content_file:
         content = content_file.read()
     return content
-
+'''
 @app.route('/getStatus')
 def getStatus():
     return Response(response= json.loads( open( pathMachinesStatus ).read() ),
                     status=200,
                     mimetype="application/json")
-
+'''
 @app.route('/getConf')
 def getConf():
+
+    #return open( pathMachinesConf ).read()
     return Response(response= json.loads( open( pathMachinesConf ).read() ),
                     status=200,
                     mimetype="application/json")
-
+'''
 @app.route('/setStatus', methods = ['POST'])
 def setStatus():
     ret = 'true'
@@ -57,6 +60,7 @@ def setConf():
                         status=200,
                         mimetype="application/json")
 
-
+'''
 if __name__ == '__main__':
-  app.run( host="0.0.0.0", port=5000 )
+    app.debug = True
+    app.run( host="0.0.0.0", port=5000 )

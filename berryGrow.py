@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+import os
 import RPi.GPIO as GPIO
 import os.path, time
 import pprint
@@ -11,8 +11,8 @@ from lib.Machine import *
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-pathMachinesConf = os.getcwd()+'conf/machinesConf.json')
-pathMachinesStatus = os.getcwd()+'conf/machinesStatus.json')
+pathMachinesConf = os.getcwd()+'/conf/machinesConf.json')
+pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json')
 
 machines = []
 
