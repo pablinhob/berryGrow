@@ -20,7 +20,8 @@ def index():
 
 @app.route('/getStatus')
 def getStatus():
-    return Response(open( open( pathMachinesStatus ).read(), mimetype='text/json')
+    return Response(open( pathMachinesStatus ).read(), mimetype='text/json')
+
 @app.route('/getConf')
 def getConf():
     return Response(open( pathMachinesConf ).read(), mimetype='text/json')
