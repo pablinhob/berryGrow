@@ -31,9 +31,14 @@ var machines = {
 
     var input = $('.timer_input').clockpicker({
         placement: 'bottom',
-
         autoclose: true
     });
+
+    $('input').change( function( ev ) {
+      eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = "' + $(ev.target).val() + '";' )
+      console.log( that.status )
+    })
+
   }
 }
 

@@ -196,7 +196,7 @@ LOLLLLLLLLLLLLLLLLL
         <div class="col-md-6">
           <div class="col-md-5  text-left"> Day :</div>
           <div class="input-group clockpicker pull-center" data-autoclose="true" data-align="top" data-placement="left">
-            <input id="<%= id %>_encendido" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.day.timer %>">
+            <input id="<%= id %>_encendido" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.day.timer %>"  data-machine-reference="status[<%= id %>].day.timer">
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-time"></span>
             </span>
@@ -205,7 +205,7 @@ LOLLLLLLLLLLLLLLLLL
         <div class="col-md-6">
           <div class="col-md-5 text-left"> Night:</div>
           <div class="input-group clockpicker" data-autoclose="true" data-align="top" data-placement="left">
-            <input id="<%= id %>_apagado" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.night.timer %>">
+            <input id="<%= id %>_apagado" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.night.timer %>" data-machine-reference="status[<%= id %>].night.timer">
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-time"></span>
             </span>
