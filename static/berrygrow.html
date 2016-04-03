@@ -18,6 +18,8 @@
     <link href="css/grayscale.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
+
+    <link href="clockpicker/bootstrap-clockpicker.css" rel="stylesheet" type="text/css">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -53,7 +55,7 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download"><img src="/img/ionicons/16/levels.png"> CONTROL</a>
+                        <a class="page-scroll" href="#control"><img src="/img/ionicons/16/levels.png"> CONTROL</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#program"><img src="/img/ionicons/16/clock.png"> PROGRAM</a>
@@ -73,24 +75,83 @@
 
     <!-- Intro Header -->
     <header id="intro-background" class="intro">
-        <div class="intro-body">
+        <div class="intro-body" id="program">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h2>ROOM 1</h2>
-                        <table><tr><td>Light 1</td><td>ON</td></tr></table>
+                  <h2 class="text-left">Program timers</h2>
+                  <div id="timers_content">
+
+
+
+
+<!--
+
+
+                    <div class="col-md-6 ">
+                      <h3>Grow room</h3>
+                      <div class="col-md-6">
+                        <div class="col-md-5  text-left"> Day :</div>
+                        <div class="input-group clockpicker pull-center" data-autoclose="true" data-align="top" data-placement="left">
+                          <input id="1_encendido" class="form-control" onfocus="blur();" type="text" value="00:00">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="col-md-5 text-left"> Night:</div>
+                        <div class="input-group clockpicker" data-autoclose="true" data-align="top" data-placement="left">
+                          <input id="1_apagado" class="form-control" onfocus="blur();" type="text" value="00:00">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
                     </div>
+
+
+
+
+                    <div class="col-md-6 ">
+                      <h3>Grow room</h3>
+                      <div class="col-md-6">
+                        <div class="col-md-5  text-left"> Day :</div>
+                        <div class="input-group clockpicker pull-center" data-autoclose="true" data-align="top" data-placement="left">
+                          <input id="2_encendido" class="form-control" onfocus="blur();" type="text" value="00:00">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="col-md-5 text-left"> Night:</div>
+                        <div class="input-group clockpicker" data-autoclose="true" data-align="top" data-placement="left">
+                          <input id="2_apagado" class="form-control" onfocus="blur();" type="text" value="00:00">
+                          <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+
+-->
+
+
+
+
+                  </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Download Section -->
-    <section id="download" class="content-section text-center">
+    <section id="control" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-
+LOLLLLLLLLLLLLLLLLL
                 </div>
             </div>
         </div>
@@ -109,8 +170,14 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- jQuery -->
+    <script src="underscore/underscore-min.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap datetimepicker JavaScript -->
+    <script src="clockpicker/bootstrap-clockpicker.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
@@ -120,6 +187,36 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/berryGrow.js"></script>
+
+
+
+    <script type="text/template" id="template_timer">
+      <div class="col-md-6 ">
+        <h3><%= machine.name %></h3>
+        <div class="col-md-6">
+          <div class="col-md-5  text-left"> Day :</div>
+          <div class="input-group clockpicker pull-center" data-autoclose="true" data-align="top" data-placement="left">
+            <input id="<%= id %>_encendido" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.day.timer %>">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-time"></span>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-5 text-left"> Night:</div>
+          <div class="input-group clockpicker" data-autoclose="true" data-align="top" data-placement="left">
+            <input id="<%= id %>_apagado" class="form-control timer_input" onfocus="blur();" type="text" value="<%= status.night.timer %>">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-time"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </script>
+
+
+
+
 
 </body>
 
