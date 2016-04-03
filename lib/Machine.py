@@ -43,8 +43,8 @@ class Machine:
 
     def start( self ):
 
-        turn_on_hour = self.conf['timer']['day']
-        turn_off_hour = self.conf['timer']['night']
+        turn_on_hour = self.status['day']['timer']
+        turn_off_hour = self.status['night']['timer']
 
     	now = datetime.datetime.now()
     	encendido = now.replace(hour= int(turn_on_hour.split(':')[0]), minute=int(turn_on_hour.split(':')[1]) )

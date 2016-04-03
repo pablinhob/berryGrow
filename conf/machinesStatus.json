@@ -1,20 +1,24 @@
 [
   {
    "day": {
+    "timer": "21:00",
     "fan_extraction":50,
     "pump": true
    },
    "night": {
+    "timer": "20:00",
     "fan_extraction":30,
     "pump": false
    }
   },
   {
    "day": {
+    "timer": "17:00",
     "fan_extraction":40,
     "pump": true
    },
    "night": {
+    "timer": "16:00",
     "fan_extraction":20,
     "pump": false
    }

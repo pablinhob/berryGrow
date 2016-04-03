@@ -9,8 +9,7 @@
         "fan_room": false,
         "lamp":5,
         "pump": false
-    },
-    "timer": {"day": "17:00", "night":"14:00"}
+    }
   },
   {
     "name": "Flowering room",
@@ -21,7 +20,6 @@
         "fan_room": false,
         "lamp":27,
         "pump": false
-    },
-    "timer": {"day": "20:00", "night":"14:00"}
+    }
   }
 ]
