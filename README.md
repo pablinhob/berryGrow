@@ -14,11 +14,12 @@ An open controller for your grow rom
 
 # Using libraries #
 * JQuery
+* Underscore.js
 * Bootstrap
 * Greyscale theme https://github.com/IronSummitMedia/startbootstrap-grayscale
-* Chartist http://gionkunz.github.io/chartist-js/
-* caman to manipulate images
 * Ion icons http://ionicons.com/
+* Clockpicker https://github.com/weareoutman/clockpicker
+
 
 # SD Backup and restore #
 Do image of your berrygrow system
