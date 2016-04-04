@@ -138,6 +138,7 @@ a:focus {
     }
 }
 
+
 .intro {
     display: table;
     width: 100%;
@@ -151,6 +152,7 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background: url(../img/intro-bg.jpg) no-repeat center center ;
 }
 
 .intro .intro-body {

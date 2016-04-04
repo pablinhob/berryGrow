@@ -35,8 +35,8 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <canvas id="canvas_img" style="display:none;"></canvas>
+<body id="historical" data-spy="scroll" data-target=".navbar-fixed-top">
+
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -57,13 +57,13 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#control"><img src="/img/ionicons/16/levels.png"> CONTROL</a>
+                        <a class="page-scroll" href="#historical"><img src="/img/ionicons/16/stats-bars.png"> HISTORICAL</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#program"><img src="/img/ionicons/16/clock.png"> PROGRAM</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#historical"><img src="/img/ionicons/16/stats-bars.png"> HISTORICAL</a>
+                        <a class="page-scroll" href="#control"><img src="/img/ionicons/16/levels.png"> CONTROL</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about"><img src="/img/ionicons/16/beaker.png"> ABOUT</a>
@@ -77,19 +77,24 @@
 
     <!-- Intro Header -->
     <header id="intro-background" class="intro">
-        <div class="intro-body" id="program">
-            <div class="container">
-                <div class="row">
-                  <h2 class="text-left">Program timers</h2>
-                  <div id="timers_content">
 
-
-
-                  </div>
-                </div>
-            </div>
-        </div>
     </header>
+
+    <section id="program" >
+      <div class="intro-body" >
+          <div class="container">
+              <div class="row">
+                <h2 class="text-left">Program timers</h2>
+                <div id="timers_content">
+
+
+
+                </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
 
     <!-- Control Section -->
     <section id="control" class="content-section text-center">
@@ -101,8 +106,16 @@
 
 
 
-                  <input type="text" class="fan_power"  value="10" />
 
+                  <div class="col-md-6 ">
+                    <h3>Grow</h3>
+
+
+
+                        <input type="text" class="fan_power"  value="10" />
+
+
+                  </div>
 
 
                 </div>

@@ -123,16 +123,16 @@ $(function() {
      this.sunrise();
      this.render();
    });*/
-   /*
+/*
    Caman("#canvas_img", "/img/intro-bg.jpg", function () {
      this.brightness(-30);
        this.render(function () {
         var img = this.toBase64();
         document.getElementById('intro-background').style.backgroundImage = "url(" + img + ")";
       });
-   });*/
+   });
 
-
+*/
 
 
 });

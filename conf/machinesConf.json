@@ -7,7 +7,7 @@
         "fan_extraction":19,
         "fan_intraction": false,
         "fan_room": false,
-        "lamp":5,
+        "lamp":4,
         "pump": false
     }
   },
