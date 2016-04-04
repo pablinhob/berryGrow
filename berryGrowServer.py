@@ -28,16 +28,12 @@ def getConf():
 
 @app.route('/setStatus', methods = ['POST'])
 def setStatus():
-    ret = 'true'
-    try:
-        jsonObj = json.load( request.form['statusData'] )
-    except ValueError, e:
-        ret =  '"Invalid JSON"'
-    else:
-        with open( pathMachinesStatus , 'w') as outfile:
-            json.dump( jsonObj, outfile )
 
-    return ret
+    json.dump( request.json, open( pathMachinesStatus, 'w' ) )
+    return Response(response= '{ "response": "" }',
+                        status=200,
+                        mimetype="application/json")
+
 
 @app.route('/setConf', methods = ['POST'])
 def setConf():
@@ -57,5 +53,5 @@ def setConf():
 
 
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run( host="0.0.0.0", port=5000 )

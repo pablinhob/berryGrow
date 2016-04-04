@@ -36,7 +36,17 @@ var machines = {
 
     $('input').change( function( ev ) {
       eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = "' + $(ev.target).val() + '";' )
-      console.log( that.status )
+
+
+      $.ajax({
+        type: 'POST',
+        url: '/setStatus',
+        data: JSON.stringify( that.status ),
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8'
+      }).done(function(msg) {
+
+      });
     })
 
   }
