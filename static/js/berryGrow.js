@@ -17,8 +17,7 @@ var machines = {
 
 
     $.each( that.conf, function( i, machine ) {
-      console.log(machine.name, that.status[i].day.timer, that.status[i].night.timer);
-
+      //console.log(machine.name, that.status[i].day.timer, that.status[i].night.timer);
       var machine_data = {
         id: i,
         machine: machine,
@@ -28,7 +27,6 @@ var machines = {
       $('#timers_content').append( template_timer(machine_data) );
     });
 
-
     var input = $('.timer_input').clockpicker({
         placement: 'bottom',
         autoclose: true
@@ -36,6 +34,7 @@ var machines = {
 
     $('input').change( function( ev ) {
       eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = "' + $(ev.target).val() + '";' )
+
 
 
       $.ajax({
@@ -51,6 +50,9 @@ var machines = {
 
   }
 }
+
+
+
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
