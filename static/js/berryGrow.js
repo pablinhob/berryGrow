@@ -27,9 +27,22 @@ var machines = {
       $('#timers_content').append( template_timer(machine_data) );
     });
 
-    var input = $('.timer_input').clockpicker({
+
+
+
+
+    $('input.timer_input').clockpicker({
         placement: 'bottom',
         autoclose: true
+    });
+
+
+    //$(".fan_power").ionRangeSlider();
+    $(".fan_power").ionRangeSlider({
+        min: 0,
+        max: 100,
+        values: [0,  20,  40,  60, 80, 100 ],
+        prefix: " % "
     });
 
     $('input').change( function( ev ) {
