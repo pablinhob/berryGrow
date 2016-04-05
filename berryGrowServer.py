@@ -6,15 +6,17 @@ import pprint
 import json
 import os
 
-pathMachinesConf = os.getcwd()+'/conf/machinesConf.json'
-pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json'
+CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+pathMachinesConf = CURRENT_PATH +'/conf/machinesConf.json'
+pathMachinesStatus = CURRENT_PATH +'/conf/machinesStatus.json'
 
 app = Flask(__name__, static_url_path='')
 
 @app.route('/')
 @app.route('/index')
 def index():
-    with open('static/berrygrow.html', 'r') as content_file:
+    with open( CURRENT_PATH + '/static/berrygrow.html', 'r') as content_file:
         content = content_file.read()
     return content
 

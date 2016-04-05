@@ -11,8 +11,10 @@ from lib.Machine import *
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-pathMachinesConf = os.getcwd()+'/conf/machinesConf.json'
-pathMachinesStatus = os.getcwd()+'/conf/machinesStatus.json'
+CURRENT_PATH = os.path.dirname(os.path.abspath(__file__))
+
+pathMachinesConf = CURRENT_PATH + '/conf/machinesConf.json'
+pathMachinesStatus = CURRENT_PATH + '/conf/machinesStatus.json'
 
 machines = []
 
