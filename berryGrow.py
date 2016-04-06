@@ -19,12 +19,16 @@ pathMachinesStatus = CURRENT_PATH + '/conf/machinesStatus.json'
 machines = []
 
 def updateMachines():
-    machinesConf = json.loads( open( pathMachinesConf ).read() )
-    machinesStatus = json.loads( open( pathMachinesStatus ).read() )
+    try:
+        machinesConf = json.loads( open( pathMachinesConf ).read() )
+        machinesStatus = json.loads( open( pathMachinesStatus ).read() )
+    except ValueError:
+        print "Error reading JSON"
+    else:
+        for (i, mConf) in enumerate( machinesConf ):
+            if( mConf['enabled'] == True ):
+                machines.append( Machine( mConf, machinesStatus[i] ) )
 
-    for (i, mConf) in enumerate( machinesConf ):
-        if( mConf['enabled'] == True ):
-            machines.append( Machine( mConf, machinesStatus[i] ) )
 
 
 
