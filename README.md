@@ -19,6 +19,7 @@ An open controller for your grow rom
 * Greyscale theme https://github.com/IronSummitMedia/startbootstrap-grayscale
 * Ion icons http://ionicons.com/
 * Clockpicker https://github.com/weareoutman/clockpicker
+* Ion.rangeSlider https://github.com/IonDen/ion.rangeSlider
 
 
 # SD Backup and restore #
