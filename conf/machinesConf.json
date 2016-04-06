@@ -4,9 +4,9 @@
     "name": "Growing room",
     "enabled": true,
     "pins" :{
-        "fan_extraction":19,
-        "fan_intraction": false,
-        "fan_room": false,
+        "fanExtraction":19,
+        "fanIntraction": false,
+        "fanRoom": false,
         "lamp":4,
         "pump": false
     }
@@ -15,9 +15,9 @@
     "name": "Flowering room",
     "enabled": false,
     "pins" :{
-        "fan_extraction":false,
-        "fan_intraction": false,
-        "fan_room": false,
+        "fanExtraction":false,
+        "fanIntraction": false,
+        "fanRoom": false,
         "lamp":27,
         "pump": false
     }

@@ -27,17 +27,17 @@ class Machine:
 
     def setPins( self ):
         GPIO.setup( self.conf['pins']['lamp'] ,GPIO.OUT)
-        GPIO.setup( self.conf['pins']['fan_extraction'] ,GPIO.OUT)
+        GPIO.setup( self.conf['pins']['fanExtraction'] ,GPIO.OUT)
 
         # set fans PWM
-        if( self.conf['pins']['fan_extraction'] != False ):
-            self.pwm_fan_extraction = GPIO.PWM( self.conf['pins']['fan_extraction'] , 100)
+        if( self.conf['pins']['fanExtraction'] != False ):
+            self.pwm_fan_extraction = GPIO.PWM( self.conf['pins']['fanExtraction'] , 100)
             self.pwm_fan_extraction.start(0)
-        if( self.conf['pins']['fan_intraction'] != False ):
-            self.pwm_fan_intraction = GPIO.PWM( self.conf['pins']['fan_intraction'] , 100)
+        if( self.conf['pins']['fanIntraction'] != False ):
+            self.pwm_fan_intraction = GPIO.PWM( self.conf['pins']['fanIntraction'] , 100)
             self.pwm_fan_intraction.start(0)
-        if( self.conf['pins']['fan_room'] != False ):
-            self.pwm_fan_room = GPIO.PWM( self.conf['pins']['fan_room'] , 100)
+        if( self.conf['pins']['fanRoom'] != False ):
+            self.pwm_fan_room = GPIO.PWM( self.conf['pins']['fanRoom'] , 100)
             self.pwm_fan_room.start(0)
 
 
@@ -77,11 +77,11 @@ class Machine:
 
         # FANS
         if( self.pwm_fan_extraction != False ):
-    	   self.pwm_fan_extraction.ChangeDutyCycle( self.status['day']['fan_extraction'] )
+    	   self.pwm_fan_extraction.ChangeDutyCycle( self.status['day']['fanExtraction'] )
         if( self.pwm_fan_intraction != False ):
-    	   self.pwm_fan_intraction.ChangeDutyCycle( self.status['day']['fan_intraction'] )
+    	   self.pwm_fan_intraction.ChangeDutyCycle( self.status['day']['fanIntraction'] )
         if( self.pwm_fan_room != False ):
-    	   self.pwm_fan_room.ChangeDutyCycle( self.status['day']['fan_room'] )
+    	   self.pwm_fan_room.ChangeDutyCycle( self.status['day']['fanRoom'] )
 
     	print self.conf['name'] +": Light ON"
 
@@ -98,10 +98,10 @@ class Machine:
 
         # FANS
         if( self.pwm_fan_extraction != False ):
-    	   self.pwm_fan_extraction.ChangeDutyCycle( self.status['night']['fan_extraction'] )
+    	   self.pwm_fan_extraction.ChangeDutyCycle( self.status['night']['fanExtraction'] )
         if( self.pwm_fan_intraction != False ):
-    	   self.pwm_fan_intraction.ChangeDutyCycle( self.status['night']['fan_intraction'] )
+    	   self.pwm_fan_intraction.ChangeDutyCycle( self.status['night']['fanIntraction'] )
         if( self.pwm_fan_room != False ):
-    	   self.pwm_fan_room.ChangeDutyCycle( self.status['night']['fan_room'] )
+    	   self.pwm_fan_room.ChangeDutyCycle( self.status['night']['fanRoom'] )
 
     	print self.conf['name'] +": Light OFF"

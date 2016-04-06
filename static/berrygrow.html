@@ -123,15 +123,7 @@ l
 
 
 
-                  <div class="col-md-6 ">
-                    <h3>Grow</h3>
 
-
-
-                        <input type="text" class="fan_power"  value="10" />
-
-
-                  </div>
 
 
                 </div>
@@ -201,7 +193,17 @@ l
       </div>
     </script>
 
-
+    <script  type="text/template" id="template_fan">
+      <div class="col-md-6 ">
+        <h3><%= machine.name %></h3>
+        <div>
+            <input type="text" class="fan_power"  data-from="<%= status.night.fanExtraction %>" data-machine-reference="status[<%= id %>].night.fanExtraction" data-is-numeric="true"/>
+        </div>
+        <div>
+            <input type="text" class="fan_power"  data-from="<%= status.day.fanExtraction %>" data-machine-reference="status[<%= id %>].day.fanExtraction" data-is-numeric="true"/>
+        </div>
+      </div>
+    </script>
 
 
 

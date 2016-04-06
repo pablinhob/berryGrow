@@ -15,19 +15,47 @@ var machines = {
     var template_timer = _.template( $('#template_timer').html() );
     $('#timers_content').html('');
 
+    var template_fan = _.template( $('#template_fan').html() );
+
+    $('#control_content').html('');
 
     $.each( that.conf, function( i, machine ) {
       //console.log(machine.name, that.status[i].day.timer, that.status[i].night.timer);
+
+      if( typeof that.status[i] != "undefined") {
+        var stat = that.status[i];
+      }
+      else {
+        var stat = false;
+      }
+
       var machine_data = {
         id: i,
         machine: machine,
-        status: that.status[i]
+        status: stat
       };
 
       $('#timers_content').append( template_timer(machine_data) );
     });
 
+    $.each( that.conf, function( i, machine ) {
+      //console.log(machine.name, that.status[i].day.timer, that.status[i].night.timer);
 
+      if( typeof that.status[i] != "undefined") {
+        var stat = that.status[i];
+      }
+      else {
+        var stat = false;
+      }
+
+      var machine_data = {
+        id: i,
+        machine: machine,
+        status: stat
+      };
+
+      $('#control_content').append( template_fan(machine_data) );
+    });
 
 
 
@@ -41,12 +69,19 @@ var machines = {
     $(".fan_power").ionRangeSlider({
         min: 0,
         max: 100,
-        values: [0,  20,  40,  60, 80, 100 ],
-        prefix: " % "
+
+
+        postfix: " % "
     });
 
     $('input').change( function( ev ) {
-      eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = "' + $(ev.target).val() + '";' )
+
+      if ( $(ev.target).attr('data-is-numeric') == "true" ) {
+        eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = ' + $(ev.target).val() + '  ;' )
+      }
+      else {
+        eval( 'that.' + $(ev.target).attr('data-machine-reference') + ' = "' + $(ev.target).val() + '";' )
+      }
 
 
 

@@ -1,1 +1,1 @@
-[{"day": {"pump": true, "fan_extraction": 50, "timer": "12:10"}, "night": {"pump": false, "fan_extraction": 30, "timer": "20:00"}}, {"day": {"pump": true, "fan_extraction": 40, "timer": "17:00"}, "night": {"pump": false, "fan_extraction": 20, "timer": "16:00"}}]
+[{"day": {"pump": true, "fanExtraction": "100", "timer": "12:10"}, "night": {"pump": false, "fanExtraction": "68", "timer": "0"}}, {"day": {"pump": true, "fanExtraction": "22", "timer": "17:00"}, "night": {"pump": false, "fanExtraction": "99", "timer": "16:00"}}]
